@@ -32,7 +32,6 @@ jobs:
       - run:
           name: switch symlink to branch
           command: |
-            rm -f ~/module
             ln -s ~/branches/${CIRCLE_BRANCH} ~/module
       - run:
           name: set up directories
@@ -91,6 +90,7 @@ jobs:
       - checkout:
             path: ~/module
       - run: cp -pr ~/module/.circleci/bin ~/bin
+      - run: chmod +x ~/bin/*.sh
       - run:
           name: raise errors if destroy detected
           command: cd ~ && ~/bin/raise.sh
