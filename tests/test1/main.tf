@@ -3,15 +3,6 @@ provider "aws" {
   region  = "us-west-2"
 }
 
-terraform {
-  backend "s3" {
-    encrypt = true
-    bucket  = "((GENERATED_BUCKET_NAME))"
-    region  = "us-west-2"
-    key     = "terraform.tfstate"
-  }
-}
-
 resource "random_string" "r_string" {
   length  = 18
   upper   = false
