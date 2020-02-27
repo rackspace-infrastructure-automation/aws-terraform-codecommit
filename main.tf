@@ -1,19 +1,19 @@
 /**
- * # aws-terraform-codecommit
- *
- *This module creates a code commit repository.
- *
- *## Basic Usage
- *
- *```
-module "codecommit_repo" {
-  source = "git@github.com:rackspace-infrastructure-automation/aws-terraform-codecommit//?ref=v0.0.1"
-  repository_name = "MyTestRepository"
-}
- *```
- *
- * Full working references are available at [examples](examples)
- */
+* # aws-terraform-codecommit
+*
+* This module creates a code commit repository.
+*
+* ## Basic Usage
+*
+* ```
+* module "codecommit_repo" {
+*  source = "git@github.com:rackspace-infrastructure-automation/aws-terraform-codecommit//?ref=v0.0.1"
+*  repository_name = "MyTestRepository"
+* }
+* ```
+*
+* Full working references are available at [examples](examples)
+*/
 
 resource "aws_codecommit_repository" "repo" {
   repository_name = "${var.repository_name}"
