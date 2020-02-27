@@ -10,17 +10,18 @@ resource "random_string" "r_string" {
 }
 
 module "sns" {
-  source     = "git@github.com:rackspace-infrastructure-automation/aws-terraform-sns//?ref=v0.0.2"
+  source = "git@github.com:rackspace-infrastructure-automation/aws-terraform-sns//?ref=v0.0.2"
+
   topic_name = "${random_string.r_string.result}-repo-notifications"
 }
 
 module "codecommit_repo" {
-  source          = "../../module"
-  repository_name = "${random_string.r_string.result}-MyTestRepository"
+  source = "../../module"
 
   enable_trigger_1          = true
-  trigger_1_name            = "${random_string.r_string.result}-trigger-1"
-  trigger_1_events          = ["all"]
-  trigger_1_destination_arn = module.sns.topic_arn
+  name                      = "${random_string.r_string.result}-MyTestRepository"
   trigger_1_custom_data     = "An event happened"
+  trigger_1_destination_arn = module.sns.topic_arn
+  trigger_1_events          = ["all"]
+  trigger_1_name            = "${random_string.r_string.result}-trigger-1"
 }

@@ -35,9 +35,16 @@ variable "enable_trigger_4" {
   default     = false
 }
 
-variable "repository_name" {
-  description = "Name of the repository"
+variable "name" {
+  description = "Name of the repository. `name` supercedes the deprecated `repository_name`. Either `name` or `repository_name` **must** contain a non-default value."
   type        = string
+  default     = ""
+}
+
+variable "repository_name" {
+  description = "Name of the repository.[**Deprecated** in favor of `name`]. It will be removed in future releases. `name` supercedes the `repository_name`. Either `name` or `repository_name` **must** contain a non-default value."
+  type        = string
+  default     = ""
 }
 
 variable "trigger_1_branches" {
