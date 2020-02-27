@@ -1,8 +1,3 @@
-output "repository_id" {
-  description = "The ID of the repository"
-  value       = aws_codecommit_repository.repo.repository_id
-}
-
 output "arn" {
   description = "The ARN of the repository"
   value       = aws_codecommit_repository.repo.arn
@@ -18,3 +13,7 @@ output "clone_url_ssh" {
   value       = aws_codecommit_repository.repo.clone_url_ssh
 }
 
+output "repository_id" {
+  description = "The ID of the repository"
+  value       = aws_codecommit_repository.repo.repository_id
+}
