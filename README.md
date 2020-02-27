@@ -4,6 +4,31 @@ This module creates a code commit repository.
 
 ## Basic Usage
 
+```
+module "codecommit_repo" {
+  source = "git@github.com:rackspace-infrastructure-automation/aws-terraform-codecommit//?ref=v0.0.1"
+  repository_name = "MyTestRepository"
+}
+```
+
+Full working references are available at [examples](examples)
+
+## Terraform 0.12 upgrade
+
+There should be no changes required to move from previous versions of this module to version 0.12.0 or higher.
+## Module variables
+
+The following module variables changes have occurred:
+
+#### Deprecations
+- `repository_name` - marked for deprecation as it no longer meets our style guide standards.
+
+#### Additions
+- `name` - introduced as a replacement for `repository_name` to better align with our style guide standards.
+
+#### Removals
+- None
+
 ## Providers
 
 | Name | Version |

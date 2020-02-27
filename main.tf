@@ -6,9 +6,9 @@
 * ## Basic Usage
 *
 * ```
-module "codecommit_repo" {
-  source = "git@github.com:rackspace-infrastructure-automation/aws-terraform-codecommit//?ref=v0.0.1"
-  repository_name = "MyTestRepository"
+* module "codecommit_repo" {
+*   source = "git@github.com:rackspace-infrastructure-automation/aws-terraform-codecommit//?ref=v0.0.1"
+*   repository_name = "MyTestRepository"
 * }
 * ```
 *
