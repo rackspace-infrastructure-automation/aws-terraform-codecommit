@@ -15,6 +15,6 @@ module "codecommit_repo" {
   enable_trigger_1          = true
   trigger_1_name            = "repo-trigger-1"
   trigger_1_events          = ["all"]
-  trigger_1_destination_arn = "${module.sns.topic_arn}"
+  trigger_1_destination_arn = module.sns.topic_arn
   trigger_1_custom_data     = "An event happened"
 }

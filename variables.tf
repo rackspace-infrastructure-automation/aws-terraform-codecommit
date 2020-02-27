@@ -20,7 +20,7 @@ variable "default_branch" {
 #############
 variable "enable_trigger_1" {
   description = "Enable trigger #1 for the repository"
-  type        = string
+  type        = bool
   default     = false
 }
 
@@ -59,7 +59,7 @@ variable "trigger_1_branches" {
 #############
 variable "enable_trigger_2" {
   description = "Enable trigger #2 for the repository"
-  type        = string
+  type        = bool
   default     = false
 }
 
@@ -98,7 +98,7 @@ variable "trigger_2_branches" {
 #############
 variable "enable_trigger_3" {
   description = "Enable trigger #3 for the repository"
-  type        = string
+  type        = bool
   default     = false
 }
 
@@ -137,7 +137,7 @@ variable "trigger_3_branches" {
 #############
 variable "enable_trigger_4" {
   description = "Enable trigger #4 for the repository"
-  type        = string
+  type        = bool
   default     = false
 }
 
