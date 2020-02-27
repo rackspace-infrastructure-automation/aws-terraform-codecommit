@@ -4,9 +4,9 @@ provider "aws" {
 }
 
 module "sns" {
-  source = "git@github.com:rackspace-infrastructure-automation/aws-terraform-sns//?ref=v0.0.2"
+  source = "git@github.com:rackspace-infrastructure-automation/aws-terraform-sns//?ref=v0.12.1"
 
-  topic_name = "repo-notifications-topic"
+  name = "repo-notifications-topic"
 }
 
 module "codecommit_repo" {
