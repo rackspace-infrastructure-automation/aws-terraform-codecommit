@@ -13,16 +13,31 @@ module "codecommit_repo" {
 
 Full working references are available at [examples](examples)
 
+## Requirements
+
+No requirements.
+
 ## Providers
 
 | Name | Version |
 |------|---------|
 | aws | n/a |
 
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [aws_codecommit_repository](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codecommit_repository) |
+| [aws_codecommit_trigger](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codecommit_trigger) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | default\_branch | The default branch for the repository | `string` | `"master"` | no |
 | description | A description of the repository | `string` | `""` | no |
 | enable\_trigger\_1 | Enable trigger #1 for the repository | `string` | `false` | no |
@@ -59,4 +74,3 @@ Full working references are available at [examples](examples)
 | clone\_url\_http | The URL to use for cloning the repository over HTTPS. |
 | clone\_url\_ssh | The URL to use for cloning the repository over SSH. |
 | repository\_id | The ID of the repository |
-
